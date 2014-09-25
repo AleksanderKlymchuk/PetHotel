@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Makereservation";
+}
+
+<div class="duf">
+    <h4>Book Hotel</h4>
+    <br />
+    @using (@Html.BeginForm("Price", "Reservation"))
+{
+    <label>
+        Species:
+    </label>
+        @Html.DropDownList("Spe",null, new { @class = "input" })
+
+        <br />
+        
+          <label> From:</label><input class="input" type="date" value="@ViewBag.interval[1]" name="startDate" /> 
+           <label>To:</label> <input class="input" type="date" value="@ViewBag.interval[2]" name="endDate" /> 
+          <input type="submit"  name="operator" value="CheckPrice" />
+       <br />
+        <label>Price: @ViewBag.total kr</label> 
+        <br />
+            <input type="submit" name="operator" value="Continue" accesskey='g' />
+        
+    }
+
+
+    <br />
+
+
+</div>

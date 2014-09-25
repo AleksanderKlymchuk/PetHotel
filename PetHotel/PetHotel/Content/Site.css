@@ -1,0 +1,199 @@
+﻿body {
+    padding-top: 10em;
+    padding-bottom: 20px;
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+ a
+{
+    font-size:large;
+    font-style:normal;
+   
+    
+}
+ a:hover
+ {
+     text-decoration:none;
+     
+ }
+li a:hover
+{
+    lighting-color:white;
+    font-size:xx-large;
+  
+
+}
+
+
+.nbc
+{
+    background-color:#070B19;
+    height:7em;
+    opacity: 0.6;
+   
+
+}
+label
+{
+    margin:1em;
+
+
+}
+
+.divframe
+{
+   width: 100%; height: 30em;
+   background-color:white;
+
+}
+.duf
+{
+    width: 100%; height:20em;background-size:20em 16em; background-repeat:no-repeat; float: left;
+    
+    text-align:left;
+    background-color:#E6E6E6;
+    font-family:sans-serif;
+    font-size:large;
+    float:left;
+    
+    
+   
+
+}
+h4
+{
+    margin-left:2%;
+    margin-top:2%;
+    font-family:sans-serif;
+    font-size:x-large;
+
+}
+div h2
+{
+   text-align:center;
+
+
+}
+
+.heading
+{
+    float:left;
+    position:absolute;
+    left:1em;
+    top:1em;
+    background-color:#517BA3;
+    text-align:center;
+    text-decoration-color:none;
+    border-top-left-radius:1em;
+    border-bottom-right-radius:1em;
+    height:4em;
+    width:4em;
+    opacity:1;  
+    font-family:sans-serif;
+    font-size:1em;
+    color:white;
+    border-right:inset;
+    border-bottom:inset;
+    border-top:outset;
+
+}
+.ulcl
+{ 
+ opacity:0.8;   
+ font-weight:900;
+ position:absolute;
+ top:1.7em;
+ left:16em;
+ color:white;
+ list-style:none;
+ 
+}
+ul li 
+{
+    margin-right:3em;
+    color:white;
+
+}
+#n1,#n2,#n3,#n4
+{
+    color:white;
+}
+
+
+
+#btn-link
+{
+    float:left;
+    margin-top:2em;
+    margin-left:2em;
+    border:outset;
+    text-align:center;
+    background-color:#C6C6C6;
+    border-radius:2em;
+    width:6em;
+    
+
+}
+
+
+.input
+{
+    height:1.6em;
+    width:10em;
+    border-radius:2em;
+
+
+}
+input
+{
+    height:1.6em;
+    width:auto;
+    border-radius:2em;
+    margin-left:1em;
+    font-family:sans-serif;
+}
+input:hover
+{
+
+
+    color:#517BA3
+}

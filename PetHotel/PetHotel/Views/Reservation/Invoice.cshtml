@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Invoice";
+}
+
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<h2>Invoices</h2>
+<table>
+    <thead>
+        <tr>
+            <td>
+                Customer
+            </td>
+            <td>
+                Address
+            </td>
+            <td>
+                Cpecies
+            </td>
+            <td> Naame
+            </td>
+            <td>
+                Recieved by:
+
+            </td>
+           
+            <td>
+                Period
+            </td>
+            <td>
+                Price
+            </td>
+            <td>
+                Days
+            </td>
+            <td>
+                Total Price
+                    
+            </td>
+            @{
+                
+           
+                
+                 foreach (var item in @ViewBag.R_C)
+                 {
+                     TimeSpan Days = @item.EndDate - @item.StartDate;
+                     int a = ViewBag.P["Dog"];
+                     int total =Convert.ToInt32( Days.TotalDays)*a;
+                    
+                     
+            <tr>
+                
+                <td>@item.Customer.FirstName<br /> @item.Customer.LastName </td>
+                <td>@item.Customer.Address <br />
+                   @item.Customer.Zipcode
+                 </td>
+                <td>@item.Cpecie</td>
+                <td>@item.PetName</td>
+                <td>@item.Employee.FirstName</td>
+                <td>@item.StartDate.ToShortDateString() to @item.EndDate.ToShortDateString()</td>
+                 <td>@ViewBag.P[@item.Cpecie] </td>   
+                <td>
+                    @Days.TotalDays.ToString() kr/day 
+               </td>
+                  
+                <td>
+                     @total kr.
+
+                </td>
+
+
+
+
+
+            </tr>
+
+
+
+
+            }
+
+                
+            }   
+           
+
+    </table>
+    <ul>
+        @*@foreach (KeyValuePair<string, int> kvp in @ViewBag.P)
+    {
+
+        <li>    @kvp.Value</li>
+
+    }*@
+
+    </ul>
+
+@Html.ActionLink("Back to reservations", "index")
+
+
+
+

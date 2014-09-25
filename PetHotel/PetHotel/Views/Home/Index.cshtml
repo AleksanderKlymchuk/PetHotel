@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+  
+    <div class="duf">
+      
+          <h4>Book Hotel</h4>
+        
+               @using (Html.BeginForm("Makereservation","Reservation")) { 
+                   
+                   string month=DateTime.Today.ToString("MM");
+                   DateTime week = DateTime.Now;
+                   
+                   
+                   string day = DateTime.Today.ToString("dd");
+                   week.AddDays(16);
+                   string checkoutday = week.ToString("dd");
+                
+                    
+                    
+                    <label>Species:</label>
+                     @Html.DropDownList("R_e",null, new { @class = "input"})
+                    <br />
+                    
+                    <label>Checkin:</label>  
+                    <input type="date" class="input" value="@DateTime.Now.Year-@month-@day" name="startDate" />
+                    
+                    <label>Checkout:</label>
+
+                    <input type="date" class="input" value="@DateTime.Now.Year-@month-@checkoutday" name="endDate" />
+                        <br />
+                    
+                    <input type="submit"  id="btn-link" value="Book" accesskey='g' />
+               }
+
+        </div>
+    
+        
+     
+
+
+    
+    
+   
+
+

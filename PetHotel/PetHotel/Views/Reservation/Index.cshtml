@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>
+<h2>Reservations</h2>
+   <table style="float:left">
+       <thead>
+           <tr>
+               <td>
+                   Species
+               </td>
+               <td>
+                   Name
+               </td>
+               <td>
+                   Arrival
+               </td>
+               <td>
+                   Ownert
+               </td>
+               <td>
+                   Phone
+               </td>
+
+        
+@foreach(var item in @ViewBag.R_1 )
+{ 
+   <tr>
+       <td>@item.Cpecie</td>   
+       <td>@item.PetName</td>
+       <td>@item.StartDate.ToShortDateString() </td>
+       <td>@item.Customer.FirstName </td>
+       <td>@item.Customer.Phone </td>
+
+
+       
+           
+           
+           
+           
+           </tr>
+  
+
+
+
+}
+    
+
+    </table>
+<div style="float:left; margin-left:10em; font-size:large">
+    
+
+        @Html.ActionLink("Invoices", "Invoice")
+    <br />
+    <br />
+         @Html.ActionLink("Employees-Invoices", "listinvoice")
+  
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+    
+
+
+
+
+
+

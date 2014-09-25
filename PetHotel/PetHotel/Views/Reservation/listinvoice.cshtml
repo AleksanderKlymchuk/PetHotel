@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "listinvoice";
+}
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+   
+    }
+    table
+    {
+        float:right;
+
+
+    }
+</style>
+
+
+<h2>Invoices</h2>
+
+ @using (Html.BeginForm("GetInvoice","Reservation",FormMethod.Get, new { enctype = "multipart/form-data" }))
+ {
+   @Html.DropDownList("data", (IEnumerable<SelectListItem>)ViewBag.R_e, new { id = "drop" })
+ @:&nbsp;&nbsp;&nbsp;
+ 
+  <input type="submit" value="Show Invoice" />
+ 
+ }
+@if (@ViewBag.name!=null)
+{
+foreach (var item in @ViewBag.name)
+{
+    TimeSpan Days = @item.EndDate - @item.StartDate;
+    int a = ViewBag.P["Dog"];
+    int total = Convert.ToInt32(Days.TotalDays) * a;
+    <br />
+    <p>@item.Customer.FirstName @item.Customer.LastName<br />
+    @item.Customer.Address<br />
+    @item.Customer.Zipcode<br />
+    Phone: @item.Customer.Phone
+    </p><br />
+    <p><b>Cpecie:</b> @item.Cpecie<br />
+      <b>Pet Name: </b> @item.PetName<br />
+      <b>Recieved by:  </b> @item.Customer.FirstName<br />
+       <b>Period:</b>@item.StartDate.ToShortDateString() to @item.EndDate.ToShortDateString()<br />
+      <b> Price:</b> @total kr.
+    </p> 
+    
+    
+    
+}
+    
+}
+
+
+
+
+@Html.ActionLink("Back to reservations", "index")
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+   
+

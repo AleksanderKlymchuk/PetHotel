@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Customer";
+}
+
+<h2>Please enter your personal data</h2>
+
+@using (@Html.BeginForm("Customer", "Reservation"))
+{
+
+
+    <input type="hidden" name=" total" value="@ViewBag.total" />
+    <input type="hidden" name="from" value="@ViewBag.from" />
+    <input type="hidden" name="to" value="@ViewBag.to" />
+    <input type="hidden" name="interval" value="@ViewBag.interval" />
+    <input type="hidden" name="species" value="@ViewBag.specie" />
+
+    <p>
+
+        <br />
+        First name
+        @Html.TextBox("FirstName")
+        <br />
+        <br />
+        Last name
+        @Html.TextBox("LastName")
+        <br />
+        <br />
+        Address &nbsp;&nbsp;
+        @Html.TextBox("Address")
+        <br />
+        <br />
+        City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.TextBox("City")
+        <br />
+        <br />
+        Zipcode &nbsp;&nbsp;
+        @Html.TextBox("Zipcode")
+        <br />
+        <br />
+        Phone  &nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.TextBox("Phone")
+        <br />
+        <br />
+        Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.TextBox("Email")
+        <br />
+        <br />
+        <h2>Please enter your pet data</h2>
+        <br />
+        PetName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.TextBox("PetName")&nbsp; Pet birthday&nbsp;<input type="date" value="2014-01-01" name="birthday" />
+        <br />
+        <br />
+        <input type="submit" value="Continue" accesskey='g' />
+    </p>
+}
